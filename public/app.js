@@ -28,14 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set up event listeners
   setupEventListeners();
-  
-  // Load themes if user is authenticated
-  supabase.auth.getSession().then(({ data: { session } }) => {
-    if (session) {
-      loadThemes();
-      loadSavedSchedules();
-    }
-  });
 });
 
 // Authentication functions
@@ -81,6 +73,11 @@ async function logout() {
 function checkAuthStatus() {
   supabase.auth.getSession().then(({ data: { session } }) => {
     updateAuthUI(session?.user);
+    if (session) {
+      loadThemes();
+      loadSavedSchedules();
+      createLessonManagementUI();
+    }
   });
 
   supabase.auth.onAuthStateChange((_event, session) => {
@@ -88,6 +85,7 @@ function checkAuthStatus() {
     if (session) {
       loadThemes();
       loadSavedSchedules();
+      createLessonManagementUI();
     }
   });
 }
@@ -96,15 +94,18 @@ function updateAuthUI(user) {
   const loggedOutUI = document.querySelector('.auth-logged-out');
   const loggedInUI = document.querySelector('.auth-logged-in');
   const userEmailElement = document.getElementById('user-email');
+  const appContent = document.getElementById('app-content');
   
   if (user) {
     loggedOutUI.style.display = 'none';
     loggedInUI.style.display = 'flex';
     userEmailElement.textContent = user.email;
+    appContent.style.display = 'flex';
   } else {
     loggedOutUI.style.display = 'flex';
     loggedInUI.style.display = 'none';
     userEmailElement.textContent = '';
+    appContent.style.display = 'none';
   }
 }
 
@@ -125,9 +126,13 @@ function initializeCalendar() {
 // Theme management functions
 async function loadThemes() {
   try {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+    
     const { data: userThemes, error } = await supabase
       .from('themes')
       .select('*')
+      .eq('user_id', user.id)
       .order('order');
       
     if (error) {
@@ -268,7 +273,7 @@ async function saveThemeOrder() {
     
     const { error } = await supabase
       .from('themes')
-      .upsert(updates, { onConflict: 'id' });
+      .upsert(updates);
       
     if (error) {
       console.error("Error saving theme order:", error);
@@ -279,6 +284,86 @@ async function saveThemeOrder() {
   } catch (error) {
     console.error("Error in saveThemeOrder:", error);
     alert("An error occurred while saving theme order");
+  }
+}
+
+// Lesson management functions
+async function createLessonManagementUI() {
+  try {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+    
+    // Load lessons from database
+    const { data: lessonData, error: lessonError } = await supabase
+      .from('lessons')
+      .select('*')
+      .eq('user_id', user.id);
+      
+    if (lessonError) {
+      console.error("Error loading lessons:", lessonError);
+      return;
+    }
+    
+    // If no lessons exist, create some default ones
+    if (!lessonData || lessonData.length === 0) {
+      await createDefaultLessons();
+    } else {
+      lessons = lessonData;
+    }
+  } catch (error) {
+    console.error("Error in createLessonManagementUI:", error);
+  }
+}
+
+async function createDefaultLessons() {
+  try {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+    
+    // Get themes first
+    const { data: userThemes, error: themeError } = await supabase
+      .from('themes')
+      .select('*')
+      .eq('user_id', user.id);
+      
+    if (themeError || !userThemes || userThemes.length === 0) {
+      console.error("No themes available for creating lessons");
+      return;
+    }
+    
+    // Create some default lessons for each theme
+    const defaultLessons = [];
+    
+    userThemes.forEach(theme => {
+      // Create 2 lessons per theme
+      defaultLessons.push({
+        name: `${theme.name} - Basics`,
+        difficulty: 2,
+        user_id: user.id,
+        theme_id: theme.id
+      });
+      
+      defaultLessons.push({
+        name: `${theme.name} - Advanced`,
+        difficulty: 4,
+        user_id: user.id,
+        theme_id: theme.id
+      });
+    });
+    
+    const { data, error } = await supabase
+      .from('lessons')
+      .insert(defaultLessons)
+      .select();
+      
+    if (error) {
+      console.error("Error creating default lessons:", error);
+      return;
+    }
+    
+    lessons = data;
+  } catch (error) {
+    console.error("Error in createDefaultLessons:", error);
   }
 }
 
@@ -311,23 +396,51 @@ async function saveLessonEdit() {
   }
   
   try {
-    const { error } = await supabase
-      .from('lessons')
-      .update({
-        name: newName,
-        difficulty: newDifficulty
-      })
-      .eq('id', currentLessonId);
-      
-    if (error) {
-      console.error("Error updating lesson:", error);
-      alert("Failed to update lesson");
-      return;
-    }
-    
-    // Update the lesson in the local array
+    // Find the lesson in our local array
     const lessonIndex = lessons.findIndex(l => l.id === currentLessonId);
-    if (lessonIndex !== -1) {
+    if (lessonIndex === -1) {
+      // This is a new lesson from a generated schedule, need to create it first
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        alert("You must be logged in to save lessons");
+        return;
+      }
+      
+      const { data, error } = await supabase
+        .from('lessons')
+        .insert([{
+          name: newName,
+          difficulty: newDifficulty,
+          user_id: user.id
+        }])
+        .select();
+        
+      if (error) {
+        console.error("Error creating new lesson:", error);
+        alert("Failed to create new lesson");
+        return;
+      }
+      
+      // Update the current lesson ID to the newly created one
+      currentLessonId = data[0].id;
+      lessons.push(data[0]);
+    } else {
+      // Update existing lesson
+      const { error } = await supabase
+        .from('lessons')
+        .update({
+          name: newName,
+          difficulty: newDifficulty
+        })
+        .eq('id', currentLessonId);
+        
+      if (error) {
+        console.error("Error updating lesson:", error);
+        alert("Failed to update lesson");
+        return;
+      }
+      
+      // Update the lesson in the local array
       lessons[lessonIndex].name = newName;
       lessons[lessonIndex].difficulty = newDifficulty;
     }
@@ -397,22 +510,6 @@ async function loadSchedule(scheduleId) {
     
     currentSchedule = data.data;
     
-    // Load lessons from the schedule
-    const lessonNames = new Set();
-    currentSchedule.forEach(entry => lessonNames.add(entry.lesson));
-    
-    // Fetch lesson details from the database
-    const { data: lessonData, error: lessonError } = await supabase
-      .from('lessons')
-      .select('*')
-      .in('name', Array.from(lessonNames));
-      
-    if (lessonError) {
-      console.error("Error loading lessons:", lessonError);
-    } else {
-      lessons = lessonData || [];
-    }
-    
     // Display on calendar
     displayScheduleOnCalendar(currentSchedule);
   } catch (error) {
@@ -425,10 +522,6 @@ function displayScheduleOnCalendar(scheduleData) {
   calendar.removeAllEvents();
   
   const events = scheduleData.map(entry => {
-    // Find the lesson in our lessons array to get the ID
-    const lesson = lessons.find(l => l.name === entry.lesson);
-    const lessonId = lesson ? lesson.id : null;
-    
     return {
       title: `${entry.type}: ${entry.lesson}`,
       start: entry.date,
@@ -441,96 +534,12 @@ function displayScheduleOnCalendar(scheduleData) {
         lesson: entry.lesson,
         difficulty: entry.difficulty,
         reviewLabel: entry.reviewLabel,
-        lessonId: lessonId
+        lessonId: entry.lessonId
       }
     };
   });
   
   calendar.addEventSource(events);
-}
-
-async function uploadSchedule() {
-  const title = document.getElementById('planTitle').value || "Untitled";
-  const fileInput = document.getElementById('fileInput');
-  
-  if (!fileInput.files || fileInput.files.length === 0) {
-    alert("Please select a file to upload");
-    return;
-  }
-  
-  try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
-      alert("You must be logged in to upload a schedule");
-      return;
-    }
-    
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-    
-    reader.onload = async function(e) {
-      try {
-        const scheduleData = JSON.parse(e.target.result);
-        
-        // Create lessons in the database if they don't exist
-        const lessonNames = new Set();
-        scheduleData.forEach(entry => lessonNames.add(entry.lesson));
-        
-        const lessonsToCreate = Array.from(lessonNames).map(name => {
-          const entry = scheduleData.find(e => e.lesson === name);
-          return {
-            name,
-            difficulty: entry.difficulty || 1,
-            user_id: user.id,
-            theme_id: null // We'll update this later when themes are assigned
-          };
-        });
-        
-        // Insert lessons
-        if (lessonsToCreate.length > 0) {
-          const { error: lessonError } = await supabase
-            .from('lessons')
-            .upsert(lessonsToCreate, { 
-              onConflict: 'name,user_id',
-              ignoreDuplicates: true 
-            });
-            
-          if (lessonError) {
-            console.error("Error creating lessons:", lessonError);
-          }
-        }
-        
-        // Save the schedule
-        const { error } = await supabase
-          .from('schedules')
-          .insert([{
-            title,
-            user_id: user.id,
-            data: scheduleData
-          }]);
-          
-        if (error) {
-          console.error("Error uploading schedule:", error);
-          alert("Failed to upload schedule");
-        } else {
-          alert("Schedule uploaded successfully");
-          loadSavedSchedules();
-          
-          // Display the uploaded schedule
-          currentSchedule = scheduleData;
-          displayScheduleOnCalendar(scheduleData);
-        }
-      } catch (error) {
-        console.error("Error parsing JSON:", error);
-        alert("Invalid JSON file");
-      }
-    };
-    
-    reader.readAsText(file);
-  } catch (error) {
-    console.error("Error in uploadSchedule:", error);
-    alert("An error occurred while uploading the schedule");
-  }
 }
 
 // Scheduling logic
@@ -737,10 +746,20 @@ async function generateSchedule() {
       END_DATE: endDate
     });
     
-    // Get lessons from database
+    // Get lessons from database with their themes
     const { data: lessonData, error: lessonError } = await supabase
       .from('lessons')
-      .select('*, themes!inner(*)')
+      .select(`
+        id, 
+        name, 
+        difficulty, 
+        user_id,
+        themes:theme_id (
+          id, 
+          name, 
+          order
+        )
+      `)
       .eq('user_id', user.id);
       
     if (lessonError) {
@@ -750,11 +769,34 @@ async function generateSchedule() {
     }
     
     if (!lessonData || lessonData.length === 0) {
-      alert("No lessons found. Please upload a schedule first.");
-      return;
+      alert("No lessons found. Creating default lessons...");
+      await createDefaultLessons();
+      
+      // Try again with the newly created lessons
+      const { data: newLessonData, error: newLessonError } = await supabase
+        .from('lessons')
+        .select(`
+          id, 
+          name, 
+          difficulty, 
+          user_id,
+          themes:theme_id (
+            id, 
+            name, 
+            order
+          )
+        `)
+        .eq('user_id', user.id);
+        
+      if (newLessonError || !newLessonData || newLessonData.length === 0) {
+        alert("Failed to create lessons. Please try again later.");
+        return;
+      }
+      
+      lessons = newLessonData;
+    } else {
+      lessons = lessonData;
     }
-    
-    lessons = lessonData;
     
     // Generate schedule
     const generator = new ScheduleGenerator(constants, lessons);

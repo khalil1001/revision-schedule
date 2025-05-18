@@ -24,15 +24,8 @@
     </div>
   </header>
 
-  <div class="main-container">
+  <div class="main-container" id="app-content" style="display: none;">
     <div class="sidebar">
-      <div class="sidebar-section">
-        <h3>Upload Schedule</h3>
-        <input type="file" id="fileInput" accept=".json">
-        <input type="text" id="planTitle" placeholder="Enter a title for your schedule">
-        <button class="action-button" onclick="uploadSchedule()">Upload</button>
-      </div>
-
       <div class="sidebar-section">
         <h3>Saved Schedules</h3>
         <select id="scheduleSelector">
