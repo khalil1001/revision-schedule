@@ -7,271 +7,98 @@
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.4/dist/umd/supabase.min.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f6f8;
-      color: #333;
-    }
-
-    header {
-      background-color: #1976d2;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      background: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #1976d2;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
-
-    input[type="file"], input[type="text"], input[type="email"], button, select {
-      width: 100%;
-      max-width: 400px;
-      display: block;
-      margin: 10px auto;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
-
-    button {
-      background-color: #1976d2;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #125ea7;
-    }
-
-    #calendar {
-      margin-top: 30px;
-    }
-
-    #authStatus {
-      text-align: center;
-      margin-top: 10px;
-      color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>📅 Study Schedule Calendar</header>
-  <div class="container">
+  <header>
+    <div class="header-title">Study Schedule Calendar</div>
+    <div class="auth-container" id="auth-container">
+      <div class="auth-logged-out">
+        <input type="email" id="email" placeholder="Enter your email">
+        <button class="auth-button" onclick="login()">Log In</button>
+      </div>
+      <div class="auth-logged-in">
+        <span class="user-email" id="user-email"></span>
+        <button class="auth-button" onclick="logout()">Log Out</button>
+      </div>
+    </div>
+  </header>
 
-    <div class="section" id="auth">
-      <h2>🔐 Authentication</h2>
-      <input type="email" id="email" placeholder="Enter your email to log in">
-      <button onclick="login()">Log In / Sign Up</button>
-      <button onclick="logout()">Log Out</button>
-      <p id="authStatus"></p>
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="sidebar-section">
+        <h3>Upload Schedule</h3>
+        <input type="file" id="fileInput" accept=".json">
+        <input type="text" id="planTitle" placeholder="Enter a title for your schedule">
+        <button class="action-button" onclick="uploadSchedule()">Upload</button>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Saved Schedules</h3>
+        <select id="scheduleSelector">
+          <option value="">Select a saved schedule</option>
+        </select>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Theme Order</h3>
+        <p>Drag to reorder themes</p>
+        <ul class="theme-list" id="theme-list">
+          <!-- Themes will be loaded here -->
+        </ul>
+        <button class="action-button" id="save-theme-order">Save Order</button>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Schedule Settings</h3>
+        <div class="form-group">
+          <label for="review-offsets">Review Days</label>
+          <input type="text" id="review-offsets" value="2,7,21,42">
+        </div>
+        <div class="form-group">
+          <label for="second-review-difficulty">Review Difficulty</label>
+          <input type="number" id="second-review-difficulty" value="0.5" step="0.1" min="0.1" max="1">
+        </div>
+        <div class="form-group">
+          <label for="max-daily-difficulty">Max Daily Difficulty</label>
+          <input type="number" id="max-daily-difficulty" value="5" min="1" max="20">
+        </div>
+        <div class="form-group">
+          <label for="start-date">Start Date</label>
+          <input type="date" id="start-date">
+        </div>
+        <div class="form-group">
+          <label for="end-date">End Date</label>
+          <input type="date" id="end-date">
+        </div>
+        <button class="action-button generate-button" id="generate-schedule">Generate Schedule</button>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>📤 Upload Your Study Schedule</h2>
-      <input type="file" id="fileInput" accept=".json">
-      <input type="text" id="planTitle" placeholder="Enter a title for your schedule">
-      <button onclick="uploadSchedule()">Upload to Supabase</button>
+    <div class="calendar-container">
+      <div id="calendar"></div>
+      
+      <!-- Lesson Edit Modal -->
+      <div class="lesson-edit-modal" id="lesson-edit-modal">
+        <div class="modal-content">
+          <h3>Edit Lesson</h3>
+          <div class="form-group">
+            <label for="edit-lesson-name">Lesson Name</label>
+            <input type="text" id="edit-lesson-name">
+          </div>
+          <div class="form-group">
+            <label for="edit-lesson-difficulty">Difficulty</label>
+            <input type="number" id="edit-lesson-difficulty" min="1" max="10">
+          </div>
+          <div class="modal-actions">
+            <button class="action-button save-button" id="save-lesson-edit">Save</button>
+            <button class="action-button cancel-button" id="cancel-lesson-edit">Cancel</button>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="section">
-      <h2>📚 Load a Saved Schedule</h2>
-      <select id="scheduleSelector">
-        <option value="">⬇️ Select a saved schedule</option>
-      </select>
-    </div>
-
-    <div id="calendar"></div>
   </div>
 
-<script>
-    const SUPABASE_URL = 'https://uulyeqatvlxcgictfhna.supabase.co';
-    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1bHllcWF0dmx4Y2dpY3RmaG5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc1MzgxNjAsImV4cCI6MjA2MzExNDE2MH0.DHK050xpVo8n27Ylx1C0TQisoR3_EsxHv0fIF8P7CBs';
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
-    let currentSchedule = [];
-
-    async function login() {
-      const email = document.getElementById('email').value;
-      if (!email) return alert("Please enter your email");
-
-      const { error } = await supabase.auth.signInWithOtp({
-        email,
-        options: {
-          emailRedirectTo: 'https://https://melivision-v2.vercel.app/'
-        }
-      });
-      if (error) {
-        alert("❌ Login failed: " + error.message);
-      } else {
-        alert("📧 Check your email for the login link");
-      }
-    }
-
-    async function logout() {
-      await supabase.auth.signOut();
-      document.getElementById('authStatus').textContent = "👋 Logged out";
-      document.getElementById('calendar').innerHTML = '';
-    }
-
-    function onLogin(user) {
-      document.getElementById('authStatus').textContent = `👋 Logged in as: ${user.email}`;
-      fetchSchedules(user);
-    }
-
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) onLogin(session.user);
-    });
-
-    supabase.auth.onAuthStateChange((_event, session) => {
-      if (session) onLogin(session.user);
-    });
-
-    document.getElementById('fileInput').addEventListener('change', function(event) {
-      const file = event.target.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const data = JSON.parse(e.target.result);
-        currentSchedule = data;
-
-        const events = data.map(entry => ({
-          title: `${entry.type}: ${entry.lesson}`,
-          start: entry.date,
-          allDay: true,
-          backgroundColor: entry.type === 'NEW' ? '#81d4fa' : '#aed581',
-          borderColor: entry.type === 'NEW' ? '#0288d1' : '#689f38',
-          textColor: 'black',
-          extendedProps: entry
-        }));
-
-        const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
-          initialView: 'dayGridMonth',
-          height: 'auto',
-          events: events,
-          eventClick: function(info) {
-            const props = info.event.extendedProps;
-            const msg = `📘 Lesson: ${props.lesson}\n📅 Date: ${props.date}\n🧠 Type: ${props.type}\n🔥 Difficulty: ${props.difficulty}\n🔁 ${props.reviewLabel ? 'Review: ' + props.reviewLabel : 'No review info'}`;
-            alert(msg);
-          }
-        });
-
-        calendar.render();
-      };
-
-      reader.readAsText(file);
-    });
-
-    async function uploadSchedule() {
-      const title = document.getElementById('planTitle').value || "Untitled";
-      if (!currentSchedule.length) return alert("No schedule data loaded.");
-
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) return alert("You must be logged in to upload.");
-
-      const { error } = await supabase
-        .from('schedules')
-        .insert([{ title: title, user_id: user.id, data: currentSchedule }]);
-
-      if (error) {
-        console.error("❌ Upload failed:", error.message);
-        alert("Failed to upload schedule.");
-      } else {
-        alert("✅ Schedule uploaded to Supabase!");
-        fetchSchedules(user);
-      }
-    }
-
-    async function fetchSchedules(user) {
-      const { data, error } = await supabase
-        .from('schedules')
-        .select('id, title')
-        .eq('user_id', user.id);
-
-      if (error) {
-        console.error("❌ Failed to fetch schedules:", error.message);
-        return;
-      }
-
-      const selector = document.getElementById('scheduleSelector');
-      selector.innerHTML = '<option value="">⬇️ Load a saved schedule</option>';
-
-      data.forEach(schedule => {
-        const option = document.createElement('option');
-        option.value = schedule.id;
-        option.textContent = schedule.title;
-        selector.appendChild(option);
-      });
-    }
-
-    document.getElementById('scheduleSelector').addEventListener('change', async function () {
-      const scheduleId = this.value;
-      if (!scheduleId) return;
-
-      const { data, error } = await supabase
-        .from('schedules')
-        .select('data')
-        .eq('id', scheduleId)
-        .single();
-
-      if (error) {
-        console.error("❌ Failed to load schedule:", error.message);
-        return;
-      }
-
-      currentSchedule = data.data;
-
-      const events = currentSchedule.map(entry => ({
-        title: `${entry.type}: ${entry.lesson}`,
-        start: entry.date,
-        allDay: true,
-        backgroundColor: entry.type === 'NEW' ? '#81d4fa' : '#aed581',
-        borderColor: entry.type === 'NEW' ? '#0288d1' : '#689f38',
-        textColor: 'black',
-        extendedProps: entry
-      }));
-
-      const calendarEl = document.getElementById('calendar');
-      calendarEl.innerHTML = '';
-
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        height: 'auto',
-        events: events,
-        eventClick: function (info) {
-          const props = info.event.extendedProps;
-          const msg = `📘 Lesson: ${props.lesson}\n📅 Date: ${props.date}\n🧠 Type: ${props.type}\n🔥 Difficulty: ${props.difficulty}\n🔁 ${props.reviewLabel ? 'Review: ' + props.reviewLabel : 'No review info'}`;
-          alert(msg);
-        }
-      });
-
-      calendar.render();
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
