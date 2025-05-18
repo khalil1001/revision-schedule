@@ -9,6 +9,7 @@ let currentSchedule = [];
 let themes = [];
 let lessons = [];
 let currentLessonId = null;
+let currentUser = null;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
@@ -64,6 +65,7 @@ async function logout() {
     clearThemeList();
     document.getElementById('scheduleSelector').innerHTML = '<option value="">Select a saved schedule</option>';
     calendar.removeAllEvents();
+    currentUser = null;
   } catch (error) {
     console.error("Logout error:", error);
     alert("An error occurred during logout");
@@ -74,6 +76,7 @@ function checkAuthStatus() {
   supabase.auth.getSession().then(({ data: { session } }) => {
     updateAuthUI(session?.user);
     if (session) {
+      currentUser = session.user;
       loadThemes();
       loadSavedSchedules();
       createLessonManagementUI();
@@ -83,6 +86,7 @@ function checkAuthStatus() {
   supabase.auth.onAuthStateChange((_event, session) => {
     updateAuthUI(session?.user);
     if (session) {
+      currentUser = session.user;
       loadThemes();
       loadSavedSchedules();
       createLessonManagementUI();
@@ -112,31 +116,49 @@ function updateAuthUI(user) {
 // Calendar functions
 function initializeCalendar() {
   const calendarEl = document.getElementById('calendar');
+  
+  // Ensure the calendar element exists
+  if (!calendarEl) {
+    console.error("Calendar element not found");
+    return;
+  }
+  
+  // Initialize FullCalendar
   calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     height: 'auto',
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek'
+    },
     events: [],
     eventClick: function(info) {
       openLessonEditModal(info.event);
     }
   });
+  
+  // Render the calendar
   calendar.render();
 }
 
 // Theme management functions
 async function loadThemes() {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    if (!currentUser) {
+      console.error("No user logged in");
+      return;
+    }
     
     const { data: userThemes, error } = await supabase
       .from('themes')
       .select('*')
-      .eq('user_id', user.id)
+      .eq('user_id', currentUser.id)
       .order('order');
       
     if (error) {
       console.error("Error loading themes:", error);
+      alert("Failed to load themes: " + error.message);
       return;
     }
     
@@ -150,13 +172,16 @@ async function loadThemes() {
     renderThemeList();
   } catch (error) {
     console.error("Error in loadThemes:", error);
+    alert("An error occurred while loading themes");
   }
 }
 
 async function createDefaultThemes() {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    if (!currentUser) {
+      console.error("No user logged in");
+      return;
+    }
     
     const defaultThemes = [
       "Psychiatrie", "Gynéco", "Orl/ophtalmo", "Chir", "Neuro", 
@@ -167,7 +192,7 @@ async function createDefaultThemes() {
     const themesToInsert = defaultThemes.map((name, index) => ({
       name,
       order: index,
-      user_id: user.id
+      user_id: currentUser.id
     }));
     
     const { data, error } = await supabase
@@ -177,6 +202,7 @@ async function createDefaultThemes() {
       
     if (error) {
       console.error("Error creating default themes:", error);
+      alert("Failed to create default themes: " + error.message);
       return;
     }
     
@@ -184,11 +210,17 @@ async function createDefaultThemes() {
     renderThemeList();
   } catch (error) {
     console.error("Error in createDefaultThemes:", error);
+    alert("An error occurred while creating default themes");
   }
 }
 
 function renderThemeList() {
   const themeList = document.getElementById('theme-list');
+  if (!themeList) {
+    console.error("Theme list element not found");
+    return;
+  }
+  
   themeList.innerHTML = '';
   
   themes.forEach(theme => {
@@ -213,7 +245,10 @@ function renderThemeList() {
 }
 
 function clearThemeList() {
-  document.getElementById('theme-list').innerHTML = '';
+  const themeList = document.getElementById('theme-list');
+  if (themeList) {
+    themeList.innerHTML = '';
+  }
   themes = [];
 }
 
@@ -257,27 +292,45 @@ function handleDragEnd() {
 
 function updateThemesOrder() {
   const themeItems = document.querySelectorAll('.theme-item');
-  themes = Array.from(themeItems).map((item, index) => {
+  const updatedThemes = [];
+  
+  Array.from(themeItems).forEach((item, index) => {
     const themeId = item.getAttribute('data-id');
     const theme = themes.find(t => t.id === themeId);
-    return { ...theme, order: index };
+    if (theme) {
+      updatedThemes.push({
+        ...theme,
+        order: index
+      });
+    }
   });
+  
+  themes = updatedThemes;
 }
 
 async function saveThemeOrder() {
   try {
+    if (!currentUser) {
+      alert("You must be logged in to save theme order");
+      return;
+    }
+    
+    // Create an array of objects with only id and order for the upsert
     const updates = themes.map(theme => ({
       id: theme.id,
-      order: theme.order
+      order: theme.order,
+      user_id: currentUser.id  // Include user_id for RLS policies
     }));
+    
+    console.log("Saving theme order:", updates);
     
     const { error } = await supabase
       .from('themes')
-      .upsert(updates);
+      .upsert(updates, { onConflict: 'id' });
       
     if (error) {
       console.error("Error saving theme order:", error);
-      alert("Failed to save theme order");
+      alert("Failed to save theme order: " + error.message);
     } else {
       alert("Theme order saved successfully");
     }
@@ -290,17 +343,20 @@ async function saveThemeOrder() {
 // Lesson management functions
 async function createLessonManagementUI() {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    if (!currentUser) {
+      console.error("No user logged in");
+      return;
+    }
     
     // Load lessons from database
     const { data: lessonData, error: lessonError } = await supabase
       .from('lessons')
       .select('*')
-      .eq('user_id', user.id);
+      .eq('user_id', currentUser.id);
       
     if (lessonError) {
       console.error("Error loading lessons:", lessonError);
+      alert("Failed to load lessons: " + lessonError.message);
       return;
     }
     
@@ -312,22 +368,26 @@ async function createLessonManagementUI() {
     }
   } catch (error) {
     console.error("Error in createLessonManagementUI:", error);
+    alert("An error occurred while setting up lesson management");
   }
 }
 
 async function createDefaultLessons() {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    if (!currentUser) {
+      console.error("No user logged in");
+      return;
+    }
     
     // Get themes first
     const { data: userThemes, error: themeError } = await supabase
       .from('themes')
       .select('*')
-      .eq('user_id', user.id);
+      .eq('user_id', currentUser.id);
       
     if (themeError || !userThemes || userThemes.length === 0) {
-      console.error("No themes available for creating lessons");
+      console.error("No themes available for creating lessons:", themeError);
+      alert("Failed to load themes for lesson creation");
       return;
     }
     
@@ -339,14 +399,14 @@ async function createDefaultLessons() {
       defaultLessons.push({
         name: `${theme.name} - Basics`,
         difficulty: 2,
-        user_id: user.id,
+        user_id: currentUser.id,
         theme_id: theme.id
       });
       
       defaultLessons.push({
         name: `${theme.name} - Advanced`,
         difficulty: 4,
-        user_id: user.id,
+        user_id: currentUser.id,
         theme_id: theme.id
       });
     });
@@ -358,12 +418,14 @@ async function createDefaultLessons() {
       
     if (error) {
       console.error("Error creating default lessons:", error);
+      alert("Failed to create default lessons: " + error.message);
       return;
     }
     
     lessons = data;
   } catch (error) {
     console.error("Error in createDefaultLessons:", error);
+    alert("An error occurred while creating default lessons");
   }
 }
 
@@ -387,62 +449,85 @@ function closeLessonEditModal() {
 }
 
 async function saveLessonEdit() {
-  const newName = document.getElementById('edit-lesson-name').value;
-  const newDifficulty = parseInt(document.getElementById('edit-lesson-difficulty').value);
-  
-  if (!newName || isNaN(newDifficulty)) {
-    alert("Please provide valid values for name and difficulty");
-    return;
-  }
-  
   try {
+    if (!currentUser) {
+      alert("You must be logged in to edit lessons");
+      return;
+    }
+    
+    const newName = document.getElementById('edit-lesson-name').value;
+    const newDifficulty = parseInt(document.getElementById('edit-lesson-difficulty').value);
+    
+    if (!newName || isNaN(newDifficulty)) {
+      alert("Please provide valid values for name and difficulty");
+      return;
+    }
+    
     // Find the lesson in our local array
     const lessonIndex = lessons.findIndex(l => l.id === currentLessonId);
+    
+    // Find a theme to associate with this lesson
+    // For simplicity, we'll use the first theme if none is associated
+    let themeId = null;
+    if (themes && themes.length > 0) {
+      themeId = themes[0].id;
+    }
+    
     if (lessonIndex === -1) {
       // This is a new lesson from a generated schedule, need to create it first
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {
-        alert("You must be logged in to save lessons");
-        return;
-      }
+      console.log("Creating new lesson:", newName, newDifficulty, themeId);
       
       const { data, error } = await supabase
         .from('lessons')
         .insert([{
           name: newName,
           difficulty: newDifficulty,
-          user_id: user.id
+          user_id: currentUser.id,
+          theme_id: themeId
         }])
         .select();
         
       if (error) {
         console.error("Error creating new lesson:", error);
-        alert("Failed to create new lesson");
+        alert("Failed to create new lesson: " + error.message);
         return;
       }
       
       // Update the current lesson ID to the newly created one
       currentLessonId = data[0].id;
       lessons.push(data[0]);
+      
+      console.log("New lesson created:", data[0]);
     } else {
       // Update existing lesson
+      // Preserve the existing theme_id if it exists
+      const existingThemeId = lessons[lessonIndex].theme_id;
+      
+      console.log("Updating lesson:", currentLessonId, newName, newDifficulty, existingThemeId || themeId);
+      
       const { error } = await supabase
         .from('lessons')
         .update({
           name: newName,
-          difficulty: newDifficulty
+          difficulty: newDifficulty,
+          theme_id: existingThemeId || themeId
         })
         .eq('id', currentLessonId);
         
       if (error) {
         console.error("Error updating lesson:", error);
-        alert("Failed to update lesson");
+        alert("Failed to update lesson: " + error.message);
         return;
       }
       
       // Update the lesson in the local array
       lessons[lessonIndex].name = newName;
       lessons[lessonIndex].difficulty = newDifficulty;
+      if (!lessons[lessonIndex].theme_id) {
+        lessons[lessonIndex].theme_id = themeId;
+      }
+      
+      console.log("Lesson updated:", lessons[lessonIndex]);
     }
     
     // Update the event on the calendar
@@ -467,20 +552,28 @@ async function saveLessonEdit() {
 // Schedule management functions
 async function loadSavedSchedules() {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    if (!currentUser) {
+      console.error("No user logged in");
+      return;
+    }
     
     const { data, error } = await supabase
       .from('schedules')
       .select('id, title')
-      .eq('user_id', user.id);
+      .eq('user_id', currentUser.id);
       
     if (error) {
       console.error("Error loading saved schedules:", error);
+      alert("Failed to load saved schedules: " + error.message);
       return;
     }
     
     const selector = document.getElementById('scheduleSelector');
+    if (!selector) {
+      console.error("Schedule selector element not found");
+      return;
+    }
+    
     selector.innerHTML = '<option value="">Select a saved schedule</option>';
     
     data.forEach(schedule => {
@@ -491,20 +584,27 @@ async function loadSavedSchedules() {
     });
   } catch (error) {
     console.error("Error in loadSavedSchedules:", error);
+    alert("An error occurred while loading saved schedules");
   }
 }
 
 async function loadSchedule(scheduleId) {
   try {
+    if (!currentUser) {
+      alert("You must be logged in to load schedules");
+      return;
+    }
+    
     const { data, error } = await supabase
       .from('schedules')
       .select('*')
       .eq('id', scheduleId)
+      .eq('user_id', currentUser.id)
       .single();
       
     if (error) {
       console.error("Error loading schedule:", error);
-      alert("Failed to load schedule");
+      alert("Failed to load schedule: " + error.message);
       return;
     }
     
@@ -519,7 +619,17 @@ async function loadSchedule(scheduleId) {
 }
 
 function displayScheduleOnCalendar(scheduleData) {
+  if (!calendar) {
+    console.error("Calendar not initialized");
+    return;
+  }
+  
   calendar.removeAllEvents();
+  
+  if (!scheduleData || scheduleData.length === 0) {
+    console.warn("No schedule data to display");
+    return;
+  }
   
   const events = scheduleData.map(entry => {
     return {
@@ -619,8 +729,11 @@ class ScheduleGenerator {
     
     // Sort lessons by theme order if available
     this.lessons.sort((a, b) => {
-      if (a.theme && b.theme) {
-        return a.theme.order - b.theme.order;
+      const themeA = themes.find(t => t.id === a.theme_id);
+      const themeB = themes.find(t => t.id === b.theme_id);
+      
+      if (themeA && themeB) {
+        return themeA.order - themeB.order;
       }
       return 0;
     });
@@ -720,8 +833,7 @@ class ScheduleGenerator {
 
 async function generateSchedule() {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
+    if (!currentUser) {
       alert("You must be logged in to generate a schedule");
       return;
     }
@@ -746,25 +858,20 @@ async function generateSchedule() {
       END_DATE: endDate
     });
     
+    // Make sure we have themes loaded
+    if (themes.length === 0) {
+      await loadThemes();
+    }
+    
     // Get lessons from database with their themes
     const { data: lessonData, error: lessonError } = await supabase
       .from('lessons')
-      .select(`
-        id, 
-        name, 
-        difficulty, 
-        user_id,
-        themes:theme_id (
-          id, 
-          name, 
-          order
-        )
-      `)
-      .eq('user_id', user.id);
+      .select('*')
+      .eq('user_id', currentUser.id);
       
     if (lessonError) {
       console.error("Error loading lessons:", lessonError);
-      alert("Failed to load lessons");
+      alert("Failed to load lessons: " + lessonError.message);
       return;
     }
     
@@ -775,18 +882,8 @@ async function generateSchedule() {
       // Try again with the newly created lessons
       const { data: newLessonData, error: newLessonError } = await supabase
         .from('lessons')
-        .select(`
-          id, 
-          name, 
-          difficulty, 
-          user_id,
-          themes:theme_id (
-            id, 
-            name, 
-            order
-          )
-        `)
-        .eq('user_id', user.id);
+        .select('*')
+        .eq('user_id', currentUser.id);
         
       if (newLessonError || !newLessonData || newLessonData.length === 0) {
         alert("Failed to create lessons. Please try again later.");
@@ -811,18 +908,26 @@ async function generateSchedule() {
     if (saveSchedule) {
       const title = prompt('Enter a title for this schedule:');
       if (title) {
-        const { error } = await supabase
+        console.log("Saving schedule:", {
+          title,
+          user_id: currentUser.id,
+          data: result.calendar,
+          config: constants.toJSON()
+        });
+        
+        const { data, error } = await supabase
           .from('schedules')
           .insert([{
             title,
-            user_id: user.id,
+            user_id: currentUser.id,
             data: result.calendar,
             config: constants.toJSON()
-          }]);
+          }])
+          .select();
           
         if (error) {
           console.error("Error saving schedule:", error);
-          alert("Failed to save schedule");
+          alert("Failed to save schedule: " + error.message);
         } else {
           alert("Schedule saved successfully");
           loadSavedSchedules();
@@ -838,20 +943,36 @@ async function generateSchedule() {
 // Set up event listeners
 function setupEventListeners() {
   // Schedule selector
-  document.getElementById('scheduleSelector').addEventListener('change', function() {
-    const scheduleId = this.value;
-    if (scheduleId) {
-      loadSchedule(scheduleId);
-    }
-  });
+  const scheduleSelector = document.getElementById('scheduleSelector');
+  if (scheduleSelector) {
+    scheduleSelector.addEventListener('change', function() {
+      const scheduleId = this.value;
+      if (scheduleId) {
+        loadSchedule(scheduleId);
+      }
+    });
+  }
   
   // Save theme order button
-  document.getElementById('save-theme-order').addEventListener('click', saveThemeOrder);
+  const saveThemeOrderBtn = document.getElementById('save-theme-order');
+  if (saveThemeOrderBtn) {
+    saveThemeOrderBtn.addEventListener('click', saveThemeOrder);
+  }
   
   // Lesson edit modal
-  document.getElementById('save-lesson-edit').addEventListener('click', saveLessonEdit);
-  document.getElementById('cancel-lesson-edit').addEventListener('click', closeLessonEditModal);
+  const saveLessonEditBtn = document.getElementById('save-lesson-edit');
+  if (saveLessonEditBtn) {
+    saveLessonEditBtn.addEventListener('click', saveLessonEdit);
+  }
+  
+  const cancelLessonEditBtn = document.getElementById('cancel-lesson-edit');
+  if (cancelLessonEditBtn) {
+    cancelLessonEditBtn.addEventListener('click', closeLessonEditModal);
+  }
   
   // Generate schedule button
-  document.getElementById('generate-schedule').addEventListener('click', generateSchedule);
+  const generateScheduleBtn = document.getElementById('generate-schedule');
+  if (generateScheduleBtn) {
+    generateScheduleBtn.addEventListener('click', generateSchedule);
+  }
 }
