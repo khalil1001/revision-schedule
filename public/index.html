@@ -74,7 +74,12 @@
       const email = document.getElementById('email').value;
       if (!email) return alert("Please enter your email");
 
-      const { error } = await supabase.auth.signInWithOtp({ email });
+      const { error } = await supabase.auth.signInWithOtp({
+        email,
+        options: {
+          emailRedirectTo: 'https://https://melivision-v2.vercel.app/'
+        }
+      });
       if (error) {
         alert("❌ Login failed: " + error.message);
       } else {
