@@ -21,7 +21,8 @@
       color: white;
       padding: 20px;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: bold;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -30,42 +31,86 @@
       margin: 30px auto;
       background: white;
       border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #1976d2;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    input[type="file"], input[type="text"], input[type="email"], button, select {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 10px auto;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    button {
+      background-color: #1976d2;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #125ea7;
     }
 
     #calendar {
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
-    input[type="file"], input[type="text"], button {
-      display: block;
-      margin: 10px auto;
-      padding: 10px;
+    #authStatus {
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>📅 Study Schedule Calendar</header>
   <div class="container">
-    <div id="auth">
+
+    <div class="section" id="auth">
+      <h2>🔐 Authentication</h2>
       <input type="email" id="email" placeholder="Enter your email to log in">
-      <button onclick="login()">🔐 Log In / Sign Up</button>
-      <button onclick="logout()">🚪 Log Out</button>
+      <button onclick="login()">Log In / Sign Up</button>
+      <button onclick="logout()">Log Out</button>
       <p id="authStatus"></p>
     </div>
-    <input type="file" id="fileInput" accept=".json">
-    <input type="text" id="planTitle" placeholder="Enter a title for your schedule">
-    <button onclick="uploadSchedule()">📤 Upload to Supabase</button>
-    <select id="scheduleSelector">
-      <option value="">⬇️ Load a saved schedule</option>
-    </select>
+
+    <div class="section">
+      <h2>📤 Upload Your Study Schedule</h2>
+      <input type="file" id="fileInput" accept=".json">
+      <input type="text" id="planTitle" placeholder="Enter a title for your schedule">
+      <button onclick="uploadSchedule()">Upload to Supabase</button>
+    </div>
+
+    <div class="section">
+      <h2>📚 Load a Saved Schedule</h2>
+      <select id="scheduleSelector">
+        <option value="">⬇️ Select a saved schedule</option>
+      </select>
+    </div>
+
     <div id="calendar"></div>
   </div>
 
-  <script>
+<script>
     const SUPABASE_URL = 'https://uulyeqatvlxcgictfhna.supabase.co';
-    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1bHllcWF0dmx4Y2dpY3RmaG5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc1MzgxNjAsImV4cCI6MjA2MzExNDE2MH0.DHK050xpVo8n27Ylx1C0TQisoR3_EsxHv0fIF8P7CBs'; // Truncated for brevity
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1bHllcWF0dmx4Y2dpY3RmaG5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc1MzgxNjAsImV4cCI6MjA2MzExNDE2MH0.DHK050xpVo8n27Ylx1C0TQisoR3_EsxHv0fIF8P7CBs';
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     let currentSchedule = [];
