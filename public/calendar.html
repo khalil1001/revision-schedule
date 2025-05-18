@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Schedule Calendar</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #1976d2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #calendar {
+      margin-top: 20px;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>📅 Study Schedule Calendar</header>
+  <div class="container">
+    <input type="file" id="fileInput" accept=".json">
+    <div id="calendar"></div>
+  </div>
+
+  <script>
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const data = JSON.parse(e.target.result);
+
+        const events = data.map(entry => ({
+          title: `${entry.type}: ${entry.lesson}`,
+          start: entry.date,
+          allDay: true,
+          backgroundColor: entry.type === 'NEW' ? '#81d4fa' : '#aed581',
+          borderColor: entry.type === 'NEW' ? '#0288d1' : '#689f38',
+          textColor: 'black',
+          extendedProps: {
+            difficulty: entry.difficulty,
+            reviewLabel: entry.review_label,
+            type: entry.type,
+            lesson: entry.lesson,
+            date: entry.date
+          }
+        }));
+
+        const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+          initialView: 'dayGridMonth',
+          height: 'auto',
+          events: events,
+          eventClick: function(info) {
+            const props = info.event.extendedProps;
+            const msg = `📘 Lesson: ${props.lesson}\n📅 Date: ${props.date}\n🧠 Type: ${props.type}\n🔥 Difficulty: ${props.difficulty}\n🔁 ${props.reviewLabel ? 'Review: ' + props.reviewLabel : 'No review info'}`;
+            alert(msg);
+          }
+        });
+
+        calendar.render();
+      };
+
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>

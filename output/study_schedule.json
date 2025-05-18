@@ -1,0 +1,2627 @@
+[
+  {
+    "date": "2025-05-30T00:00:00",
+    "type": "NEW",
+    "lesson": "1. Accidents vasculaires cérébraux.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-05-31T00:00:00",
+    "type": "NEW",
+    "lesson": "2. Adénopathies superficielles.",
+    "difficulty": 2.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-05-31T00:00:00",
+    "type": "NEW",
+    "lesson": "4. Appendicite aiguë. Etiopathogénie, Diagnostic, Orientations thérapeutiques",
+    "difficulty": 2.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "1. Accidents vasculaires cérébraux. (2-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-02T00:00:00",
+    "type": "NEW",
+    "lesson": "3. Anémies.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-03T00:00:00",
+    "type": "NEW",
+    "lesson": "5. Arrêt cardio-circulatoire. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 3.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-03T00:00:00",
+    "type": "NEW",
+    "lesson": "6. Arthrite septique. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 3.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "2. Adénopathies superficielles. (2-day)",
+    "difficulty": 3.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "4. Appendicite aiguë. Etiopathogénie, Diagnostic, Orientations thérapeutiques (2-day)",
+    "difficulty": 3.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-04T00:00:00",
+    "type": "NEW",
+    "lesson": "7. Asthme de l’adulte et de l’enfant. Etiopathogénie, Physiopathologie, Diagnostic, Formes graves, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-05T00:00:00",
+    "type": "NEW",
+    "lesson": "8. Bronchiolites du nourrisson. Diagnostic, traitement.",
+    "difficulty": 4.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-05T00:00:00",
+    "type": "NEW",
+    "lesson": "10.Brûlures cutanées récentes. Physiopathologie, Prise en charge initiale.",
+    "difficulty": 4.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "5. Arrêt cardio-circulatoire. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 4.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "6. Arthrite septique. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 4.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-06T00:00:00",
+    "type": "NEW",
+    "lesson": "9. Bronchopneumopathies chroniques obstructives. Etiopathogénie, Diagnostic, traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-07T00:00:00",
+    "type": "NEW",
+    "lesson": "11.Cancer broncho-pulmonaire. Etiopathogénie, Diagnostic, Orientations Thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-07T00:00:00",
+    "type": "NEW",
+    "lesson": "16.Céphalées. Physiopathologie, Orientation Diagnostique.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "3. Anémies. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "1. Accidents vasculaires cérébraux. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-09T00:00:00",
+    "type": "NEW",
+    "lesson": "12.Cancer du cavum. Etiopathogénie, Diagnostic, Orientations Thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-10T00:00:00",
+    "type": "NEW",
+    "lesson": "13.Cancer du col de l’utérus Etiopathogénie, Diagnostic, Orientations Thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-11T00:00:00",
+    "type": "NEW",
+    "lesson": "14.Cancer du sein.  Etiopathogénie, Diagnostic, Orientations Thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-12T00:00:00",
+    "type": "NEW",
+    "lesson": "15.Cancers colorectaux. Etiopathogénie, Diagnostic, Orientations Thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-13T00:00:00",
+    "type": "NEW",
+    "lesson": "17.Coma. Orientations Diagnostiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-13T00:00:00",
+    "type": "NEW",
+    "lesson": "18.Contraception. Bases scientifiques, modalités pratiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "10.Brûlures cutanées récentes. Physiopathologie, Prise en charge initiale. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-14T00:00:00",
+    "type": "NEW",
+    "lesson": "19.Déshydratations aiguës de l’enfant. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-14T00:00:00",
+    "type": "NEW",
+    "lesson": "22.Douleurs thoraciques aiguës. Orientation Diagnostique.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "7. Asthme de l’adulte et de l’enfant. Etiopathogénie, Physiopathologie, Diagnostic, Formes graves, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "9. Bronchopneumopathies chroniques obstructives. Etiopathogénie, Diagnostic, traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-16T00:00:00",
+    "type": "NEW",
+    "lesson": "20.Diabète sucré. Epidémiologie, Etiopathogénie, Diagnostic, Complications, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-17T00:00:00",
+    "type": "NEW",
+    "lesson": "21.Diarrhées chroniques. Physiopathologie, Diagnostic.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-18T00:00:00",
+    "type": "NEW",
+    "lesson": "23.Dyslipidémies. Epidémiologie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-19T00:00:00",
+    "type": "NEW",
+    "lesson": "24.Dysphagies. Orientation diagnostique.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-19T00:00:00",
+    "type": "NEW",
+    "lesson": "25.Endocardites infectieuses. Physiopathologie, Diagnostic, Prévention, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-20T00:00:00",
+    "type": "NEW",
+    "lesson": "26.Epilepsies. Diagnostic, traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-20T00:00:00",
+    "type": "NEW",
+    "lesson": "27.Etat de choc cardiogénique. Etiopathogénie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "10.Brûlures cutanées récentes. Physiopathologie, Prise en charge initiale. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-21T00:00:00",
+    "type": "NEW",
+    "lesson": "28.Etat de choc hémorragique.  Etiopathogénie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-21T00:00:00",
+    "type": "NEW",
+    "lesson": "29.Etats confusionnels. Orientation Diagnostique.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "3. Anémies. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "2. Adénopathies superficielles. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "7. Asthme de l’adulte et de l’enfant. Etiopathogénie, Physiopathologie, Diagnostic, Formes graves, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "12.Cancer du cavum. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-23T00:00:00",
+    "type": "NEW",
+    "lesson": "30.Etats septiques graves.  Classification, Etiopathogénie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-23T00:00:00",
+    "type": "NEW",
+    "lesson": "31.Fractures ouvertes de la jambe. Physiopathologie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-24T00:00:00",
+    "type": "NEW",
+    "lesson": "32.Grossesse extra-utérine. Etiopathogénie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-24T00:00:00",
+    "type": "NEW",
+    "lesson": "42.Infections des voies aériennes supérieures. Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-25T00:00:00",
+    "type": "NEW",
+    "lesson": "33.Hématuries. Physiopathologie, Orientation Diagnostique, Traitement dans les situations d’urgence.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-25T00:00:00",
+    "type": "NEW",
+    "lesson": "43.Infections respiratoires basses communautaires. Facteurs de risque, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "19.Déshydratations aiguës de l’enfant. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-26T00:00:00",
+    "type": "NEW",
+    "lesson": "34.Hémorragies digestives. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-26T00:00:00",
+    "type": "NEW",
+    "lesson": "47.Insuffisance surrénalienne aiguë. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-27T00:00:00",
+    "type": "NEW",
+    "lesson": "35.Hépatites virales. Epidémiologie, Etiopathogénie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-28T00:00:00",
+    "type": "NEW",
+    "lesson": "36.Hydatidoses hépatiques et pulmonaires. Epidémiologie, Etiopathogénie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "13.Cancer du col de l’utérus Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "9. Bronchopneumopathies chroniques obstructives. Etiopathogénie, Diagnostic, traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-30T00:00:00",
+    "type": "NEW",
+    "lesson": "37.Hypercalcémies.  Physiopathologie, Orientation diagnostque, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-06-30T00:00:00",
+    "type": "NEW",
+    "lesson": "53.Métrorragies. Orientation Diagnostique.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-01T00:00:00",
+    "type": "NEW",
+    "lesson": "38.Hypertension artérielle. Epidémiologie, Physiopathologie, Ethiopathogénie, Diagnostic, Complications, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-02T00:00:00",
+    "type": "NEW",
+    "lesson": "39.Hyperthyroïdies. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-02T00:00:00",
+    "type": "NEW",
+    "lesson": "54.Occlusions intestinales aiguës.  Physiopathologie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-03T00:00:00",
+    "type": "NEW",
+    "lesson": "40.Hypothyroïdies de l’enfant et de l’adulte. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-03T00:00:00",
+    "type": "NEW",
+    "lesson": "56.Œil rouge. Orientation Diagnostique.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-04T00:00:00",
+    "type": "NEW",
+    "lesson": "41.Ictères.  Physiopathologie, Diagnostic.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-04T00:00:00",
+    "type": "NEW",
+    "lesson": "57.Péritonites aiguës. Physiopathologie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-05T00:00:00",
+    "type": "NEW",
+    "lesson": "44.Infections sexuellement transmissibles. Etiopathogénie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-05T00:00:00",
+    "type": "NEW",
+    "lesson": "59.Polytraumatisme. Physiopathologie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "14.Cancer du sein.  Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "15.Cancers colorectaux. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-07T00:00:00",
+    "type": "NEW",
+    "lesson": "45.Infections urinaires. Epidémiologie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-07T00:00:00",
+    "type": "NEW",
+    "lesson": "64.Splénomégalies. Physiopathologie, Diagnostic.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-08T00:00:00",
+    "type": "NEW",
+    "lesson": "46.Insuffisance rénale aiguë. Etiopathogénie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-08T00:00:00",
+    "type": "NEW",
+    "lesson": "55.Œdèmes. Etiopathogénie, Physiopathologie, Diagnostic.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-09T00:00:00",
+    "type": "NEW",
+    "lesson": "48.Intoxications par le CO, les organophosphorés et les psychotropes. Physiopathologie, Diagnostic,",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "19.Déshydratations aiguës de l’enfant. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-10T00:00:00",
+    "type": "NEW",
+    "lesson": "49.Ischémie aiguës des membres.  Physiopathologie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-10T00:00:00",
+    "type": "NEW",
+    "lesson": "61.Prise en charge de la douleur aiguë. Evaluation, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-11T00:00:00",
+    "type": "NEW",
+    "lesson": "50.Lithiase urinaire. Etiopathogénie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "24.Dysphagies. Orientation diagnostique. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-12T00:00:00",
+    "type": "NEW",
+    "lesson": "51.Maladies veineuses thrombo-emboliques. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "26.Epilepsies. Diagnostic, traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "12.Cancer du cavum. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "13.Cancer du col de l’utérus Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-14T00:00:00",
+    "type": "NEW",
+    "lesson": "52.Méningites bactériennes et virales. Etiopathogénie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "27.Etat de choc cardiogénique. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-15T00:00:00",
+    "type": "NEW",
+    "lesson": "58.Polyarthrite rhumatoïde. Etiopathogénie, Diagnostic.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-15T00:00:00",
+    "type": "NEW",
+    "lesson": "66.Transfusion sanguine. Bases immuno-hématologiques, Indications, Complications.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-16T00:00:00",
+    "type": "NEW",
+    "lesson": "60.Prééclampsies et Eclampsies. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-16T00:00:00",
+    "type": "NEW",
+    "lesson": "72.Tuberculose pulmonaire commune. Epidémiologie, Etiopathogénie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-17T00:00:00",
+    "type": "NEW",
+    "lesson": "62.Purpuras. Etiopathogénie, Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-17T00:00:00",
+    "type": "NEW",
+    "lesson": "75.Vaccinations.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-18T00:00:00",
+    "type": "NEW",
+    "lesson": "63.Schizophrénie. Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "11.Cancer broncho-pulmonaire. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-19T00:00:00",
+    "type": "NEW",
+    "lesson": "65.Syndromes coronariens aigus Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "10.Brûlures cutanées récentes. Physiopathologie, Prise en charge initiale. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "14.Cancer du sein.  Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "20.Diabète sucré. Epidémiologie, Etiopathogénie, Diagnostic, Complications, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-21T00:00:00",
+    "type": "NEW",
+    "lesson": "67.Traumatisme crânien. Physiopathologie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "11.Cancer broncho-pulmonaire. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-22T00:00:00",
+    "type": "NEW",
+    "lesson": "68.Troubles acido-basiques. Physiopathologie, Diagnostic.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "30.Etats septiques graves.  Classification, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-23T00:00:00",
+    "type": "NEW",
+    "lesson": "69.Troubles anxieux. Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "11.Cancer broncho-pulmonaire. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-24T00:00:00",
+    "type": "NEW",
+    "lesson": "70.Troubles de l’humeur. Diagnostic, traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "30.Etats septiques graves.  Classification, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-25T00:00:00",
+    "type": "NEW",
+    "lesson": "71.Troubles de l’hydratation, dyskaliémies. Physiopathologie, Diagnostic, Traitement.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "24.Dysphagies. Orientation diagnostique. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-26T00:00:00",
+    "type": "NEW",
+    "lesson": "73.Tumeurs de la prostate. Etiopathogénie, Diagnostic, Orientations thérapeutiques.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "15.Cancers colorectaux. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "21.Diarrhées chroniques. Physiopathologie, Diagnostic. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-28T00:00:00",
+    "type": "NEW",
+    "lesson": "74.Ulcère gastrique et duodénal.",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "40.Hypothyroïdies de l’enfant et de l’adulte. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "1. Accidents vasculaires cérébraux. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "23.Dyslipidémies. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "3. Anémies. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "20.Diabète sucré. Epidémiologie, Etiopathogénie, Diagnostic, Complications, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-31T00:00:00",
+    "type": "REVIEW",
+    "lesson": "21.Diarrhées chroniques. Physiopathologie, Diagnostic. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-07-31T00:00:00",
+    "type": "REVIEW",
+    "lesson": "7. Asthme de l’adulte et de l’enfant. Etiopathogénie, Physiopathologie, Diagnostic, Formes graves, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "23.Dyslipidémies. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "9. Bronchopneumopathies chroniques obstructives. Etiopathogénie, Diagnostic, traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "35.Hépatites virales. Epidémiologie, Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "12.Cancer du cavum. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "36.Hydatidoses hépatiques et pulmonaires. Epidémiologie, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "13.Cancer du col de l’utérus Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "14.Cancer du sein.  Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "15.Cancers colorectaux. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "38.Hypertension artérielle. Epidémiologie, Physiopathologie, Ethiopathogénie, Diagnostic, Complications, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "35.Hépatites virales. Epidémiologie, Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "36.Hydatidoses hépatiques et pulmonaires. Epidémiologie, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "20.Diabète sucré. Epidémiologie, Etiopathogénie, Diagnostic, Complications, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "21.Diarrhées chroniques. Physiopathologie, Diagnostic. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "38.Hypertension artérielle. Epidémiologie, Physiopathologie, Ethiopathogénie, Diagnostic, Complications, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "23.Dyslipidémies. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "1. Accidents vasculaires cérébraux. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "3. Anémies. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "7. Asthme de l’adulte et de l’enfant. Etiopathogénie, Physiopathologie, Diagnostic, Formes graves, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "9. Bronchopneumopathies chroniques obstructives. Etiopathogénie, Diagnostic, traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "35.Hépatites virales. Epidémiologie, Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "36.Hydatidoses hépatiques et pulmonaires. Epidémiologie, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "12.Cancer du cavum. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "13.Cancer du col de l’utérus Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "38.Hypertension artérielle. Epidémiologie, Physiopathologie, Ethiopathogénie, Diagnostic, Complications, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "14.Cancer du sein.  Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "15.Cancers colorectaux. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "20.Diabète sucré. Epidémiologie, Etiopathogénie, Diagnostic, Complications, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "73.Tumeurs de la prostate. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "21.Diarrhées chroniques. Physiopathologie, Diagnostic. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "23.Dyslipidémies. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-16T00:00:00",
+    "type": "REVIEW",
+    "lesson": "73.Tumeurs de la prostate. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-16T00:00:00",
+    "type": "REVIEW",
+    "lesson": "35.Hépatites virales. Epidémiologie, Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-17T00:00:00",
+    "type": "REVIEW",
+    "lesson": "36.Hydatidoses hépatiques et pulmonaires. Epidémiologie, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-17T00:00:00",
+    "type": "REVIEW",
+    "lesson": "38.Hypertension artérielle. Epidémiologie, Physiopathologie, Ethiopathogénie, Diagnostic, Complications, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "73.Tumeurs de la prostate. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "41.Ictères.  Physiopathologie, Diagnostic. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "4. Appendicite aiguë. Etiopathogénie, Diagnostic, Orientations thérapeutiques (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "44.Infections sexuellement transmissibles. Etiopathogénie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "45.Infections urinaires. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "42.Infections des voies aériennes supérieures. Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "40.Hypothyroïdies de l’enfant et de l’adulte. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "41.Ictères.  Physiopathologie, Diagnostic. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "26.Epilepsies. Diagnostic, traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "48.Intoxications par le CO, les organophosphorés et les psychotropes. Physiopathologie, Diagnostic, (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "44.Infections sexuellement transmissibles. Etiopathogénie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "27.Etat de choc cardiogénique. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "50.Lithiase urinaire. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "30.Etats septiques graves.  Classification, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "47.Insuffisance surrénalienne aiguë. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "45.Infections urinaires. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "51.Maladies veineuses thrombo-emboliques. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "42.Infections des voies aériennes supérieures. Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "48.Intoxications par le CO, les organophosphorés et les psychotropes. Physiopathologie, Diagnostic, (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "52.Méningites bactériennes et virales. Etiopathogénie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "53.Métrorragies. Orientation Diagnostique. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "50.Lithiase urinaire. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "11.Cancer broncho-pulmonaire. Etiopathogénie, Diagnostic, Orientations Thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "47.Insuffisance surrénalienne aiguë. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-26T00:00:00",
+    "type": "REVIEW",
+    "lesson": "51.Maladies veineuses thrombo-emboliques. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-26T00:00:00",
+    "type": "REVIEW",
+    "lesson": "52.Méningites bactériennes et virales. Etiopathogénie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-26T00:00:00",
+    "type": "REVIEW",
+    "lesson": "54.Occlusions intestinales aiguës.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "65.Syndromes coronariens aigus Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "40.Hypothyroïdies de l’enfant et de l’adulte. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "19.Déshydratations aiguës de l’enfant. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "41.Ictères.  Physiopathologie, Diagnostic. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "44.Infections sexuellement transmissibles. Etiopathogénie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "53.Métrorragies. Orientation Diagnostique. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "65.Syndromes coronariens aigus Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "71.Troubles de l’hydratation, dyskaliémies. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "54.Occlusions intestinales aiguës.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "45.Infections urinaires. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "48.Intoxications par le CO, les organophosphorés et les psychotropes. Physiopathologie, Diagnostic, (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "24.Dysphagies. Orientation diagnostique. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-31T00:00:00",
+    "type": "REVIEW",
+    "lesson": "50.Lithiase urinaire. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-31T00:00:00",
+    "type": "REVIEW",
+    "lesson": "71.Troubles de l’hydratation, dyskaliémies. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-08-31T00:00:00",
+    "type": "REVIEW",
+    "lesson": "55.Œdèmes. Etiopathogénie, Physiopathologie, Diagnostic. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "51.Maladies veineuses thrombo-emboliques. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "30.Etats septiques graves.  Classification, Etiopathogénie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "26.Epilepsies. Diagnostic, traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "52.Méningites bactériennes et virales. Etiopathogénie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "65.Syndromes coronariens aigus Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "27.Etat de choc cardiogénique. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "40.Hypothyroïdies de l’enfant et de l’adulte. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "41.Ictères.  Physiopathologie, Diagnostic. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "61.Prise en charge de la douleur aiguë. Evaluation, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "71.Troubles de l’hydratation, dyskaliémies. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "44.Infections sexuellement transmissibles. Etiopathogénie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "42.Infections des voies aériennes supérieures. Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "45.Infections urinaires. Epidémiologie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "48.Intoxications par le CO, les organophosphorés et les psychotropes. Physiopathologie, Diagnostic, (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "55.Œdèmes. Etiopathogénie, Physiopathologie, Diagnostic. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "73.Tumeurs de la prostate. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "50.Lithiase urinaire. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "8. Bronchiolites du nourrisson. Diagnostic, traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "51.Maladies veineuses thrombo-emboliques. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "52.Méningites bactériennes et virales. Etiopathogénie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "10.Brûlures cutanées récentes. Physiopathologie, Prise en charge initiale. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "65.Syndromes coronariens aigus Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "71.Troubles de l’hydratation, dyskaliémies. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "47.Insuffisance surrénalienne aiguë. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "18.Contraception. Bases scientifiques, modalités pratiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "22.Douleurs thoraciques aiguës. Orientation Diagnostique. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "18.Contraception. Bases scientifiques, modalités pratiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "16.Céphalées. Physiopathologie, Orientation Diagnostique. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "22.Douleurs thoraciques aiguës. Orientation Diagnostique. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "25.Endocardites infectieuses. Physiopathologie, Diagnostic, Prévention, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "25.Endocardites infectieuses. Physiopathologie, Diagnostic, Prévention, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "5. Arrêt cardio-circulatoire. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "32.Grossesse extra-utérine. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "33.Hématuries. Physiopathologie, Orientation Diagnostique, Traitement dans les situations d’urgence. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "34.Hémorragies digestives. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "6. Arthrite septique. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "32.Grossesse extra-utérine. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "33.Hématuries. Physiopathologie, Orientation Diagnostique, Traitement dans les situations d’urgence. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "37.Hypercalcémies.  Physiopathologie, Orientation diagnostque, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "8. Bronchiolites du nourrisson. Diagnostic, traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "34.Hémorragies digestives. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "18.Contraception. Bases scientifiques, modalités pratiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "39.Hyperthyroïdies. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "16.Céphalées. Physiopathologie, Orientation Diagnostique. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "22.Douleurs thoraciques aiguës. Orientation Diagnostique. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "37.Hypercalcémies.  Physiopathologie, Orientation diagnostque, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "39.Hyperthyroïdies. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "17.Coma. Orientations Diagnostiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "25.Endocardites infectieuses. Physiopathologie, Diagnostic, Prévention, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "46.Insuffisance rénale aiguë. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "49.Ischémie aiguës des membres.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "17.Coma. Orientations Diagnostiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-16T00:00:00",
+    "type": "REVIEW",
+    "lesson": "32.Grossesse extra-utérine. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-16T00:00:00",
+    "type": "REVIEW",
+    "lesson": "46.Insuffisance rénale aiguë. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-16T00:00:00",
+    "type": "REVIEW",
+    "lesson": "33.Hématuries. Physiopathologie, Orientation Diagnostique, Traitement dans les situations d’urgence. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-16T00:00:00",
+    "type": "REVIEW",
+    "lesson": "2. Adénopathies superficielles. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-17T00:00:00",
+    "type": "REVIEW",
+    "lesson": "34.Hémorragies digestives. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-17T00:00:00",
+    "type": "REVIEW",
+    "lesson": "49.Ischémie aiguës des membres.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-17T00:00:00",
+    "type": "REVIEW",
+    "lesson": "58.Polyarthrite rhumatoïde. Etiopathogénie, Diagnostic. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-17T00:00:00",
+    "type": "REVIEW",
+    "lesson": "4. Appendicite aiguë. Etiopathogénie, Diagnostic, Orientations thérapeutiques (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "60.Prééclampsies et Eclampsies. Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "62.Purpuras. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "63.Schizophrénie. Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-18T00:00:00",
+    "type": "REVIEW",
+    "lesson": "28.Etat de choc hémorragique.  Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "37.Hypercalcémies.  Physiopathologie, Orientation diagnostque, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "58.Polyarthrite rhumatoïde. Etiopathogénie, Diagnostic. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "39.Hyperthyroïdies. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-19T00:00:00",
+    "type": "REVIEW",
+    "lesson": "29.Etats confusionnels. Orientation Diagnostique. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "60.Prééclampsies et Eclampsies. Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "67.Traumatisme crânien. Physiopathologie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "62.Purpuras. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-20T00:00:00",
+    "type": "REVIEW",
+    "lesson": "5. Arrêt cardio-circulatoire. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "68.Troubles acido-basiques. Physiopathologie, Diagnostic. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "18.Contraception. Bases scientifiques, modalités pratiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "63.Schizophrénie. Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-21T00:00:00",
+    "type": "REVIEW",
+    "lesson": "6. Arthrite septique. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "69.Troubles anxieux. Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "22.Douleurs thoraciques aiguës. Orientation Diagnostique. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "70.Troubles de l’humeur. Diagnostic, traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-22T00:00:00",
+    "type": "REVIEW",
+    "lesson": "31.Fractures ouvertes de la jambe. Physiopathologie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "67.Traumatisme crânien. Physiopathologie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "46.Insuffisance rénale aiguë. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "68.Troubles acido-basiques. Physiopathologie, Diagnostic. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-23T00:00:00",
+    "type": "REVIEW",
+    "lesson": "8. Bronchiolites du nourrisson. Diagnostic, traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "69.Troubles anxieux. Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "74.Ulcère gastrique et duodénal. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "25.Endocardites infectieuses. Physiopathologie, Diagnostic, Prévention, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-24T00:00:00",
+    "type": "REVIEW",
+    "lesson": "43.Infections respiratoires basses communautaires. Facteurs de risque, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "49.Ischémie aiguës des membres.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "70.Troubles de l’humeur. Diagnostic, traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "74.Ulcère gastrique et duodénal. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-25T00:00:00",
+    "type": "REVIEW",
+    "lesson": "16.Céphalées. Physiopathologie, Orientation Diagnostique. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-26T00:00:00",
+    "type": "REVIEW",
+    "lesson": "32.Grossesse extra-utérine. Etiopathogénie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-26T00:00:00",
+    "type": "REVIEW",
+    "lesson": "58.Polyarthrite rhumatoïde. Etiopathogénie, Diagnostic. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-26T00:00:00",
+    "type": "REVIEW",
+    "lesson": "33.Hématuries. Physiopathologie, Orientation Diagnostique, Traitement dans les situations d’urgence. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-26T00:00:00",
+    "type": "REVIEW",
+    "lesson": "28.Etat de choc hémorragique.  Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "60.Prééclampsies et Eclampsies. Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "34.Hémorragies digestives. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "62.Purpuras. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-27T00:00:00",
+    "type": "REVIEW",
+    "lesson": "29.Etats confusionnels. Orientation Diagnostique. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "63.Schizophrénie. Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "37.Hypercalcémies.  Physiopathologie, Orientation diagnostque, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "67.Traumatisme crânien. Physiopathologie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-28T00:00:00",
+    "type": "REVIEW",
+    "lesson": "31.Fractures ouvertes de la jambe. Physiopathologie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "68.Troubles acido-basiques. Physiopathologie, Diagnostic. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "39.Hyperthyroïdies. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "69.Troubles anxieux. Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-29T00:00:00",
+    "type": "REVIEW",
+    "lesson": "43.Infections respiratoires basses communautaires. Facteurs de risque, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "70.Troubles de l’humeur. Diagnostic, traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "74.Ulcère gastrique et duodénal. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "46.Insuffisance rénale aiguë. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-09-30T00:00:00",
+    "type": "REVIEW",
+    "lesson": "17.Coma. Orientations Diagnostiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "49.Ischémie aiguës des membres.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "58.Polyarthrite rhumatoïde. Etiopathogénie, Diagnostic. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "60.Prééclampsies et Eclampsies. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-01T00:00:00",
+    "type": "REVIEW",
+    "lesson": "56.Œil rouge. Orientation Diagnostique. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "62.Purpuras. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "63.Schizophrénie. Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "67.Traumatisme crânien. Physiopathologie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-02T00:00:00",
+    "type": "REVIEW",
+    "lesson": "57.Péritonites aiguës. Physiopathologie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "68.Troubles acido-basiques. Physiopathologie, Diagnostic. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "69.Troubles anxieux. Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "70.Troubles de l’humeur. Diagnostic, traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-03T00:00:00",
+    "type": "REVIEW",
+    "lesson": "59.Polytraumatisme. Physiopathologie, Diagnostic, Orientations thérapeutiques. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "74.Ulcère gastrique et duodénal. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "61.Prise en charge de la douleur aiguë. Evaluation, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "66.Transfusion sanguine. Bases immuno-hématologiques, Indications, Complications. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "72.Tuberculose pulmonaire commune. Epidémiologie, Etiopathogénie, Diagnostic, Traitement. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-04T00:00:00",
+    "type": "REVIEW",
+    "lesson": "64.Splénomégalies. Physiopathologie, Diagnostic. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "75.Vaccinations. (2-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "53.Métrorragies. Orientation Diagnostique. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "66.Transfusion sanguine. Bases immuno-hématologiques, Indications, Complications. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "54.Occlusions intestinales aiguës.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-05T00:00:00",
+    "type": "REVIEW",
+    "lesson": "72.Tuberculose pulmonaire commune. Epidémiologie, Etiopathogénie, Diagnostic, Traitement. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "75.Vaccinations. (7-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "19.Déshydratations aiguës de l’enfant. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "55.Œdèmes. Etiopathogénie, Physiopathologie, Diagnostic. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "24.Dysphagies. Orientation diagnostique. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-06T00:00:00",
+    "type": "REVIEW",
+    "lesson": "61.Prise en charge de la douleur aiguë. Evaluation, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "26.Epilepsies. Diagnostic, traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "27.Etat de choc cardiogénique. Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "42.Infections des voies aériennes supérieures. Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "66.Transfusion sanguine. Bases immuno-hématologiques, Indications, Complications. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-07T00:00:00",
+    "type": "REVIEW",
+    "lesson": "72.Tuberculose pulmonaire commune. Epidémiologie, Etiopathogénie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "47.Insuffisance surrénalienne aiguë. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "75.Vaccinations. (21-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "53.Métrorragies. Orientation Diagnostique. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "54.Occlusions intestinales aiguës.  Physiopathologie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-08T00:00:00",
+    "type": "REVIEW",
+    "lesson": "55.Œdèmes. Etiopathogénie, Physiopathologie, Diagnostic. (42-day)",
+    "difficulty": 5.0,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "61.Prise en charge de la douleur aiguë. Evaluation, Traitement. (42-day)",
+    "difficulty": 4.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "66.Transfusion sanguine. Bases immuno-hématologiques, Indications, Complications. (42-day)",
+    "difficulty": 4.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "72.Tuberculose pulmonaire commune. Epidémiologie, Etiopathogénie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 4.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "75.Vaccinations. (42-day)",
+    "difficulty": 4.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-09T00:00:00",
+    "type": "REVIEW",
+    "lesson": "56.Œil rouge. Orientation Diagnostique. (7-day)",
+    "difficulty": 4.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "57.Péritonites aiguës. Physiopathologie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "2. Adénopathies superficielles. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "4. Appendicite aiguë. Etiopathogénie, Diagnostic, Orientations thérapeutiques (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "28.Etat de choc hémorragique.  Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-10T00:00:00",
+    "type": "REVIEW",
+    "lesson": "29.Etats confusionnels. Orientation Diagnostique. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "59.Polytraumatisme. Physiopathologie, Diagnostic, Orientations thérapeutiques. (7-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "31.Fractures ouvertes de la jambe. Physiopathologie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "64.Splénomégalies. Physiopathologie, Diagnostic. (7-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "5. Arrêt cardio-circulatoire. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-11T00:00:00",
+    "type": "REVIEW",
+    "lesson": "6. Arthrite septique. Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "43.Infections respiratoires basses communautaires. Facteurs de risque, Diagnostic, Traitement. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "8. Bronchiolites du nourrisson. Diagnostic, traitement. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "16.Céphalées. Physiopathologie, Orientation Diagnostique. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "56.Œil rouge. Orientation Diagnostique. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-12T00:00:00",
+    "type": "REVIEW",
+    "lesson": "17.Coma. Orientations Diagnostiques. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "57.Péritonites aiguës. Physiopathologie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "59.Polytraumatisme. Physiopathologie, Diagnostic, Orientations thérapeutiques. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "64.Splénomégalies. Physiopathologie, Diagnostic. (21-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "28.Etat de choc hémorragique.  Etiopathogénie, Physiopathologie, Diagnostic, Traitement. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-13T00:00:00",
+    "type": "REVIEW",
+    "lesson": "29.Etats confusionnels. Orientation Diagnostique. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "31.Fractures ouvertes de la jambe. Physiopathologie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "43.Infections respiratoires basses communautaires. Facteurs de risque, Diagnostic, Traitement. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "56.Œil rouge. Orientation Diagnostique. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "57.Péritonites aiguës. Physiopathologie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-14T00:00:00",
+    "type": "REVIEW",
+    "lesson": "59.Polytraumatisme. Physiopathologie, Diagnostic, Orientations thérapeutiques. (42-day)",
+    "difficulty": 2.5,
+    "review_label": null
+  },
+  {
+    "date": "2025-10-15T00:00:00",
+    "type": "REVIEW",
+    "lesson": "64.Splénomégalies. Physiopathologie, Diagnostic. (42-day)",
+    "difficulty": 0.5,
+    "review_label": null
+  }
+]
