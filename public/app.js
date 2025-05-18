@@ -315,11 +315,12 @@ async function saveThemeOrder() {
       return;
     }
     
-    // Create an array of objects with only id and order for the upsert
+    // Include all required fields (id, name, order, user_id) for the upsert
     const updates = themes.map(theme => ({
       id: theme.id,
+      name: theme.name,  // Include the name field to satisfy not-null constraint
       order: theme.order,
-      user_id: currentUser.id  // Include user_id for RLS policies
+      user_id: currentUser.id
     }));
     
     console.log("Saving theme order:", updates);
@@ -339,6 +340,7 @@ async function saveThemeOrder() {
     alert("An error occurred while saving theme order");
   }
 }
+
 
 // Lesson management functions
 async function createLessonManagementUI() {
@@ -916,14 +918,15 @@ async function generateSchedule() {
         });
         
         const { data, error } = await supabase
-          .from('schedules')
-          .insert([{
-            title,
-            user_id: currentUser.id,
-            data: result.calendar,
-            config: constants.toJSON()
-          }])
-          .select();
+            .from('schedules')
+            .insert([{
+                title,
+                user_id: currentUser.id,
+                data: result.calendar
+                // Remove config field if it's causing issues
+            }])
+            .select();
+
           
         if (error) {
           console.error("Error saving schedule:", error);
