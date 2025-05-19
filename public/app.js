@@ -13,13 +13,30 @@ let currentUser = null;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
+  // Make sure the app content is hidden initially, but auth container is visible
+  const appContent = document.getElementById('app-content');
+  if (appContent) {
+    appContent.style.display = 'none';
+  }
+  
+  const authContainer = document.getElementById('auth-container');
+  if (authContainer) {
+    authContainer.style.display = 'flex';
+  }
+  
   // Set default dates
   const today = new Date();
-  document.getElementById('start-date').valueAsDate = today;
+  const startDateInput = document.getElementById('start-date');
+  if (startDateInput) {
+    startDateInput.valueAsDate = today;
+  }
   
   const threeMonthsLater = new Date();
   threeMonthsLater.setMonth(today.getMonth() + 3);
-  document.getElementById('end-date').valueAsDate = threeMonthsLater;
+  const endDateInput = document.getElementById('end-date');
+  if (endDateInput) {
+    endDateInput.valueAsDate = threeMonthsLater;
+  }
   
   // Initialize calendar
   initializeCalendar();
@@ -63,8 +80,13 @@ async function logout() {
     await supabase.auth.signOut();
     updateAuthUI(null);
     clearThemeList();
-    document.getElementById('scheduleSelector').innerHTML = '<option value="">Select a saved schedule</option>';
-    calendar.removeAllEvents();
+    const scheduleSelector = document.getElementById('scheduleSelector');
+    if (scheduleSelector) {
+      scheduleSelector.innerHTML = '<option value="">Select a saved schedule</option>';
+    }
+    if (calendar) {
+      calendar.removeAllEvents();
+    }
     currentUser = null;
   } catch (error) {
     console.error("Logout error:", error);
@@ -101,15 +123,22 @@ function updateAuthUI(user) {
   const appContent = document.getElementById('app-content');
   
   if (user) {
-    loggedOutUI.style.display = 'none';
-    loggedInUI.style.display = 'flex';
-    userEmailElement.textContent = user.email;
-    appContent.style.display = 'flex';
+    if (loggedOutUI) loggedOutUI.style.display = 'none';
+    if (loggedInUI) loggedInUI.style.display = 'flex';
+    if (userEmailElement) userEmailElement.textContent = user.email;
+    if (appContent) appContent.style.display = 'flex';
+    
+    // Ensure calendar is properly rendered after login
+    if (calendar) {
+      setTimeout(() => {
+        calendar.render();
+      }, 100);
+    }
   } else {
-    loggedOutUI.style.display = 'flex';
-    loggedInUI.style.display = 'none';
-    userEmailElement.textContent = '';
-    appContent.style.display = 'none';
+    if (loggedOutUI) loggedOutUI.style.display = 'flex';
+    if (loggedInUI) loggedInUI.style.display = 'none';
+    if (userEmailElement) userEmailElement.textContent = '';
+    if (appContent) appContent.style.display = 'none';
   }
 }
 
@@ -135,6 +164,16 @@ function initializeCalendar() {
     events: [],
     eventClick: function(info) {
       openLessonEditModal(info.event);
+    },
+    // Add a "no events" message when calendar is empty
+    noEventsContent: 'No events to display. Generate a schedule to see events.',
+    // Ensure proper rendering
+    viewDidMount: function() {
+      if (calendar) {
+        setTimeout(() => {
+          calendar.updateSize();
+        }, 200);
+      }
     }
   });
   
@@ -340,7 +379,6 @@ async function saveThemeOrder() {
     alert("An error occurred while saving theme order");
   }
 }
-
 
 // Lesson management functions
 async function createLessonManagementUI() {
@@ -913,20 +951,19 @@ async function generateSchedule() {
         console.log("Saving schedule:", {
           title,
           user_id: currentUser.id,
-          data: result.calendar,
-          config: constants.toJSON()
+          data: result.calendar
+          // Remove config field if it's causing issues
         });
         
         const { data, error } = await supabase
-            .from('schedules')
-            .insert([{
-                title,
-                user_id: currentUser.id,
-                data: result.calendar
-                // Remove config field if it's causing issues
-            }])
-            .select();
-
+          .from('schedules')
+          .insert([{
+            title,
+            user_id: currentUser.id,
+            data: result.calendar
+            // Remove config field if it's causing issues
+          }])
+          .select();
           
         if (error) {
           console.error("Error saving schedule:", error);
@@ -945,6 +982,18 @@ async function generateSchedule() {
 
 // Set up event listeners
 function setupEventListeners() {
+  // Login button
+  const loginBtn = document.querySelector('.auth-logged-out button');
+  if (loginBtn) {
+    loginBtn.addEventListener('click', login);
+  }
+  
+  // Logout button
+  const logoutBtn = document.querySelector('.auth-logged-in button');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', logout);
+  }
+  
   // Schedule selector
   const scheduleSelector = document.getElementById('scheduleSelector');
   if (scheduleSelector) {
