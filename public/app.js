@@ -100,23 +100,36 @@ async function logout() {
 }
 
 function checkAuthStatus() {
+  // First, check the current session only once
   supabase.auth.getSession().then(({ data: { session } }) => {
-    updateAuthUI(session?.user);
     if (session) {
-      currentUser = session.user;
-      loadThemes();
-      loadSavedSchedules();
-      createLessonManagementUI();
+      // Only update UI and load data if we weren't already logged in
+      if (!currentUser) {
+        currentUser = session.user;
+        updateAuthUI(session.user);
+        loadThemes();
+        loadSavedSchedules();
+        createLessonManagementUI();
+      }
+    } else {
+      updateAuthUI(null);
     }
   });
 
+  // Then set up the listener for future changes
   supabase.auth.onAuthStateChange((_event, session) => {
-    updateAuthUI(session?.user);
     if (session) {
-      currentUser = session.user;
-      loadThemes();
-      loadSavedSchedules();
-      createLessonManagementUI();
+      // Only update UI and load data if we weren't already logged in
+      if (!currentUser || currentUser.id !== session.user.id) {
+        currentUser = session.user;
+        updateAuthUI(session.user);
+        loadThemes();
+        loadSavedSchedules();
+        createLessonManagementUI();
+      }
+    } else {
+      currentUser = null;
+      updateAuthUI(null);
     }
   });
 }
