@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     appContent.style.display = 'none';
   }
   
+  const welcomeContainer = document.getElementById('welcome-container');
+  if (welcomeContainer) {
+    welcomeContainer.style.display = 'flex'; // Show welcome section by default
+  }
+  
   const authContainer = document.getElementById('auth-container');
   if (authContainer) {
     authContainer.style.display = 'flex';
@@ -121,12 +126,15 @@ function updateAuthUI(user) {
   const loggedInUI = document.querySelector('.auth-logged-in');
   const userEmailElement = document.getElementById('user-email');
   const appContent = document.getElementById('app-content');
+  const welcomeContainer = document.getElementById('welcome-container');
   
   if (user) {
+    // User is logged in
     if (loggedOutUI) loggedOutUI.style.display = 'none';
     if (loggedInUI) loggedInUI.style.display = 'flex';
     if (userEmailElement) userEmailElement.textContent = user.email;
     if (appContent) appContent.style.display = 'flex';
+    if (welcomeContainer) welcomeContainer.style.display = 'none'; // Hide welcome section when logged in
     
     // Ensure calendar is properly rendered after login
     if (calendar) {
@@ -135,10 +143,12 @@ function updateAuthUI(user) {
       }, 100);
     }
   } else {
+    // User is logged out
     if (loggedOutUI) loggedOutUI.style.display = 'flex';
     if (loggedInUI) loggedInUI.style.display = 'none';
     if (userEmailElement) userEmailElement.textContent = '';
     if (appContent) appContent.style.display = 'none';
+    if (welcomeContainer) welcomeContainer.style.display = 'flex'; // Show welcome section when logged out
   }
 }
 
